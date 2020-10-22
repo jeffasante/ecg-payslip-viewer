@@ -1,0 +1,29 @@
+{
+  "name": "ecg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwind build src/styles.css -o public/styles.css",
+    "git-build": "rm -rf ./dist/*"
+  },
+  "keywords": [],
+  "author": "jeffasante",
+  "license": "ISC",
+  "dependencies": {
+    "npm-git-install": "^0.3.0",
+    "socket.io": "^2.3.0",
+    "tailwindcss": "^1.8.3",
+    "tailwindcss-plugin-heroicons": "0.0.9",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffasante/ecg-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffasante/ecg-demo/issues"
+  },
+  "homepage": "https://github.com/jeffasante/ecg-demo#readme",
+  "description": "progress"
+}

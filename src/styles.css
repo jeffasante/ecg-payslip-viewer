@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;515;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+    /* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(16, 14, 14, 0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(14, 11, 11, 0.3); 
+}
+
+
+
+
+.btn{
+    @apply rounded-full py-3 px-5  lowercase  cursor-pointer ;
+}
+
+/* .btn-small{
+    @apply rounded-full py-2 px-3 lowercase font-bold cursor-pointer tracking-wider;
+} */
+
+.in-form{
+    @apply  block  px-10 py-5 mt-4 border-gray-400 text-lg bg-gray-300; 
+} 
+
+th{
+    @apply font-bold text-lg;
+}
+
+td{
+    @apply mx-20;
+}
+th, td {
+
+    @apply  py-4 px-10 text-center border-b-4 border-gray-300;
+} 
+
+
+tr:last-child{
+    @apply mb-3; 
+}
+
+td a{
+    @apply text-blue-600;
+    
+}
+
+td a:hover{
+    @apply text-blue-700;
+}
+
+td a:hover,
+td a:link{
+    @apply border-b-0 rounded-md text-blue-700;
+} 

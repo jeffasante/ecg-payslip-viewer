@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+       <title>ECG PAYSLIP</title>
+        
+        <link rel="stylesheet" href="styles.css">
+    
+
+
+    </head>
+  
+        
+    <!-- pb-32 -->
+    <!-- font-light -->
+    <!-- <body class=" font-body  bg-fixed text-sm md:text-2xl grid grid-col-12 gap-10 md:grid md:grid-col-12 md:gap-5" style="background-image:linear-gradient(120deg, rgba(1, 1, 128, 0.7) 0%, rgba(0, 0, 99, 0.7) 100%) , url(resources/img/img1.jpeg); background-size: cover; background-position: center;  background-attachment: fixed; ">
+      
+         -->
+
+         
+         <body class="bg-blue-800 font-body h-full bg-fixed text-sm md:text-2xl grid grid-col-12 gap-10 md:grid md:grid-col-12 md:gap-5 ">
+      
+            <div class="bg-black opacity-50 hidden fixed z-20 inset-0 " id="hide-menu"></div>
+
+              <!-- Header -->
+              <header class="relative col-start-1 col-end-5 sm:col-end-12 row-start-1 row-end-2 md:row-start-1 md:row-end-1 justify-center md:mt-1 "> 
+      
+                <div class="relative grid grid-col-12 gap-1 sm:text-center ">
+            
+                    <!-- md:mt-2 -->
+                    <div class=" col-start-1 z-30  sm:col-end-2 row-start-1 row-end-1  ml-2 md:ml-6  mt-4 sm:mt-0" >
+                    <img  class="absolute w-12 sm:w-20 " src="resources/img/logo.png" alt="ecg logo">
+                    </div>
+             
+                    <!-- left nav--- which is inside menu -->
+                    <!-- if signed in -->
+                    <!-- set to flex if hidden -->
+                    <div class="relative hidden z-30 text-white  col-start-10  sm:col-start-12 sm:col-end-13  md:col-start-13  row-start-1 row-end-1  mt-6 md:mt-6 -mr-4 md:mr-0  " id="logged-in-icons">
+                        
+                        <!-- bell svg -->
+                        <div class="relative cursor-pointer mx-6 sm:mx-10 rounded-full shadow-xl"  >
+                            <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  id="alert-status"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                            
+                        <div class="absolute top-0 right-0   transform -translate-x-1 -mt-1 p-1  rounded bg-yellow-500 "></div>
+                       </div>
+            
+                        <!-- profile head svg-->
+                        <div class="bg-teal-600 rounded-full p-1 -mt-1 cursor-pointer ">
+                            <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" name="name-profile-btn"   id="profile-btn"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+            
+                    </div>
+            
+                    <!-- if user signed sign in nav -->
+                    <div class=" absolute  hidden   right-0 top-0 mr-8 sm:mr-20  md:mr-12   z-30   mt-16 sm:mt-16 md:-mt-4   col-start-6  md:col-start-12 row-start-1  md:row-start-2  text-base"id="menu-profile"> 
+            
+                        
+                        <nav class="bg-white  text-gray-700   border-solid border-2 border-gray-800 md:border-none   mx-2  md:mt-5    rounded-lg  shadow-xl  grid grid-col-1 justify-end md:justify-start   "  >
+            
+                            
+                            <ul class="  py-1  " id="nav-first">
+            
+                                
+                                <a href="index.html" class="block    pr-56  py-4 text-left   md:text-center  pl-2    rounded  rounded-l-none  hover:bg-secondary-100 hover:text-black  border-solid  md:hover:border-gray-700">
+                                       <!-- user first name -->
+                                       <h3  id="status-name-stripped" class=" font-bold mb-2 "></h3> 
+            
+                                       <!-- user id number -->
+                                       <h3 class="text-sm  text-gray-500 whitespace-no-wrap" id="status-id-stripped"></h3> 
+                                </a>
+                                
+                                <hr class="">
+                                
+                                <a href="#" class="block    pr-56  py-4 text-left   md:text-center  pl-2     rounded  rounded-l-none md:rounded-none hover:bg-secondary-100 hover:text-black  border-solid  md:hover:border-gray-700">
+                                    <h3 class="whitespace-no-wrap   ">settings</h3>
+                                        
+                                </a>
+            
+                                <hr class="">
+            
+                                <a href="#" class="block    pr-56  py-4 text-left   md:text-center  pl-2     rounded  rounded-l-none md:rounded-none hover:bg-secondary-100 hover:text-black  border-solid  md:hover:border-gray-700">
+                                    <h3 class="whitespace-no-wrap   ">sign out</h3>
+                                        
+                                </a>
+                                </ul> 
+                            </nav>
+                    </div>
+            
+                     <!-- if not signed in -->
+                     <!-- set to block if hidden -->
+                    <div class=" col-start-12 row-start-1 sm:col-start-13 row-end-1 md:hidden mt-5 md:mt-6 "  >
+                        <button type="button" class="text-secondary-100  hover:text-white focus:text-white focus:outline-none " name="name-menu-btn"  id="menu-btn">
+                            
+                           
+                                <div class="flex cursor-pointer">
+                                    <svg class="w-8  " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                                </div>
+            
+                                <div class="hidden">
+                                    <svg class="w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                </div>
+            
+                        </button>
+                    </div>
+                
+                <!-- if user not signed sign in nav -->
+                    <div class="absolute hidden  right-0 top-0 sm:mr-4 md:mr-0 md:relative z-30  md:block  mt-16 sm:mt-16 md:mt-4   col-start-6 sm:col-start-2 md:col-start-3 md:col-end-5 row-start-1  md:row-start-1 "id="menu-original"> 
+            
+                    
+                            <!-- if user loged in, hide log in and sign up menu. block display the  -->
+                        <nav class="bg-white md:bg-opacity-0 text-gray-700 md:text-secondary-100  sm:text-lg border-solid border-2 border-gray-800 md:border-none   md:flex  mx-2 md:mx-0   md:py-0   rounded-lg md:rounded-none  shadow-xl md:shadow-none grid grid-col-1 justify-end   "  >
+                
+                            <!-- my-1 -->
+                            <ul class=" md:block md:my-0   text-right  " id="nav-second">
+            
+                                
+                                        <a href="index.html" class="block  md:inline pr-56 md:pr-0 md:m-8 py-4 text-left   md:text-center pl-2 md:pl-0 rounded rounded-l-none md:rounded-full hover:text-red-900 md:hover:bg-gray-600 md:hover:opacity-75 hover:bg-secondary-100     ">
+                                                <span class="md:px-2">home</span> 
+                                            </a>
+                                        
+                                        <hr class="md:hidden">
+                                            
+                                        <a href="contact.html" class="block  md:inline pr-56 md:pr-0 md:m-8 py-4 text-left   md:text-center pl-2 md:pl-0 rounded rounded-l-none md:rounded-full hover:text-red-900 md:hover:bg-gray-600 md:hover:opacity-75 hover:bg-secondary-100       ">  
+                                            <span class="md:px-2">contact</span>
+                                                
+                                        </a>
+            
+                                        <hr class="md:hidden">
+            
+                                        <a href="payslip.html" class="block  md:inline pr-56 md:pr-0 md:m-8 py-4 text-left   md:text-center pl-2 md:pl-0 rounded rounded-l-none md:rounded-full hover:text-red-900 md:hover:bg-gray-600 md:hover:opacity-75 hover:bg-secondary-100       ">
+                                            <!-- if user log in correctly show this  --- remember to set it back to block not flex -->
+                                            <span class="md:px-2">payslip</span>
+                                                
+                                        </a>
+            
+            
+                            </ul> 
+                        
+                            <!-- if user lgo in succesfull, replace block with hidden -->
+                            <ul class="block  md:my-0 " id="nav-third" > 
+                                <hr class="md:hidden">
+                                <a href="#" class="block md:text-secondary-100  md:inline pr-56 md:pr-0 md:px-8 md:m-8 py-4 md:py-2 text-left   md:text-center pl-2 md:pl-0 rounded rounded-l-none  md:border-solid md:border-4 md:border-secondary-100 md:rounded-full  md:shadow-md hover:bg-secondary-100 md:hover:bg-yellow-600  hover:text-red-900 "  id="login-btn">
+                                    <!-- if user log in correctly hide this  --- remember to set it back to block not flex -->
+                                    <span class="p-1 md:ml-2">login</span>
+                                        
+                                </a>
+            
+                                
+                                <hr class="md:hidden">
+                                
+                                <a href="#" class="block md:text-gray-800    md:inline pr-56 md:pr-0 md:px-8 md:m-8 py-4 md:py-2 text-left   md:text-center pl-2 md:pl-0 rounded rounded-l-none  md:border-solid md:border-4 md:border-secondary-100 md:rounded-full md:bg-secondary-100  md:shadow-md hover:bg-secondary-100 md:hover:bg-yellow-600  hover:text-red-900 " id="signup-btn">
+                                    <!-- if user log in correctly hide this  --- remember to set it back to block not flex -->
+                                    <span class="p-1 md:mx-1">signup</span>
+                                        
+                                </a>
+            
+                            </ul>
+                            
+                    </nav>
+            
+                </div>
+            
+                </div>
+            
+            
+                </header>
+
+                
+        <main class="  z-20 row-start-5  col-start-2 col-end-5 sm:col-end-12 md:col-start-2 md:col-end-11  md:mt-20">
+
+            <h1 class="text-4xl md:text-6xl text-white">
+                We look forward <br>
+                    to hearing from you.
+            </h1>
+
+            <h3 class="text-lg mt-6 text-gray-400 md:text-4xl">
+                Contact us at <a href="mailto:payroll@ecggh.com" class="hover:text-red-500 hover:underline transition ease-linear duration-500 ">payroll@ecggh.com</a>
+            </h3>
+
+        </main>
+        
+
+       
+  <!-- <script src="resources/js/payslip.js"></script> -->
+  <script src="resources/js/engine.js"></script> 
+</body>
+</html>

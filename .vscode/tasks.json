@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build-css",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build-css",
+			"detail": "tailwind build src/styles.css -o public/styles.css"
+		}
+	]
+}
